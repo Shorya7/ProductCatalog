@@ -7,17 +7,20 @@ import Navbar from "./components/Navbar";
 const App = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
+  const closePopup = () => {
+    setSelectedProduct(null); // Close popup when close button clicked
+  };
+
+
   return (
     <>
     <Navbar/>
-    <div className="min-h-screen bg-gray-100 p-4">
-      {!selectedProduct ? (
+    <div className={`min-h-screen relative top-14 bg-gray-100 p-4 ${selectedProduct ? "overflow-hidden" : ""}`}>
+      <div className={`${selectedProduct ? "blur-sm" : ""}`}>
         <ProductList onSelectProduct={setSelectedProduct} />
-      ) : (
-        <ProductDetails
-          product={selectedProduct}
-          onBack={() => setSelectedProduct(null)}
-        />
+      </div>
+      {selectedProduct && (
+        <ProductDetails product={selectedProduct} onClose={closePopup} />
       )}
     </div>
     </>
