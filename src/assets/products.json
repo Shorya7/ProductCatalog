@@ -1,0 +1,163 @@
+[
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "category": "Electronics",
+      "price": 99.99,
+      "image": "/images/headphones.jpg",
+      "description": "High-quality wireless headphones with noise cancellation."
+    },
+    {
+      "id": 2,
+      "name": "Smart Watch",
+      "category": "Electronics",
+      "price": 199.99,
+      "image": "/images/smartwatch.jpg",
+      "description": "Stay connected on the go with this stylish smart watch."
+    },
+    {
+      "id": 3,
+      "name": "4K LED TV",
+      "category": "Electronics",
+      "price": 599.99,
+      "image": "/images/tv.jpg",
+      "description": "Enjoy stunning picture quality with this 55-inch 4K Ultra HD TV."
+    },
+    {
+      "id": 4,
+      "name": "Bluetooth Speaker",
+      "category": "Electronics",
+      "price": 49.99,
+      "image": "/images/speaker.jpg",
+      "description": "Portable Bluetooth speaker with deep bass and long battery life."
+    },
+    {
+      "id": 5,
+      "name": "Running Shoes",
+      "category": "Sports",
+      "price": 89.99,
+      "image": "/images/running-shoes.jpg",
+      "description": "Lightweight and comfortable running shoes for daily workouts."
+    },
+    {
+      "id": 6,
+      "name": "Yoga Mat",
+      "category": "Sports",
+      "price": 19.99,
+      "image": "/images/yoga-mat.jpg",
+      "description": "Durable and non-slip yoga mat for all your exercise needs."
+    },
+    {
+      "id": 7,
+      "name": "Mountain Bike",
+      "category": "Sports",
+      "price": 299.99,
+      "image": "/images/mountain-bike.jpg",
+      "description": "High-performance mountain bike with durable frame and suspension."
+    },
+    {
+      "id": 8,
+      "name": "Leather Wallet",
+      "category": "Accessories",
+      "price": 29.99,
+      "image": "/images/wallet.jpg",
+      "description": "Stylish and durable leather wallet with multiple compartments."
+    },
+    {
+      "id": 9,
+      "name": "Sunglasses",
+      "category": "Accessories",
+      "price": 49.99,
+      "image": "/images/sunglasses.jpg",
+      "description": "Polarized sunglasses for clear vision and UV protection."
+    },
+    {
+      "id": 10,
+      "name": "Backpack",
+      "category": "Accessories",
+      "price": 59.99,
+      "image": "/images/backpack.jpg",
+      "description": "Spacious and lightweight backpack for travel and daily use."
+    },
+    {
+      "id": 11,
+      "name": "Kitchen Knife Set",
+      "category": "Home",
+      "price": 39.99,
+      "image": "/images/knife-set.jpg",
+      "description": "Sharp and durable kitchen knife set for all your cooking needs."
+    },
+    {
+      "id": 12,
+      "name": "Air Purifier",
+      "category": "Home",
+      "price": 129.99,
+      "image": "/images/air-purifier.jpg",
+      "description": "Compact air purifier for a clean and healthy home environment."
+    },
+    {
+      "id": 13,
+      "name": "Coffee Maker",
+      "category": "Home",
+      "price": 79.99,
+      "image": "/images/coffee-maker.jpg",
+      "description": "Brew fresh and aromatic coffee every morning with this coffee maker."
+    },
+    {
+      "id": 14,
+      "name": "Fiction Novel",
+      "category": "Books",
+      "price": 14.99,
+      "image": "/images/fiction-novel.jpg",
+      "description": "Captivating fiction novel by a bestselling author."
+    },
+    {
+      "id": 15,
+      "name": "Cookbook",
+      "category": "Books",
+      "price": 24.99,
+      "image": "/images/cookbook.jpg",
+      "description": "Explore delicious recipes with this beautifully illustrated cookbook."
+    },
+    {
+      "id": 16,
+      "name": "Wireless Keyboard",
+      "category": "Electronics",
+      "price": 49.99,
+      "image": "/images/keyboard.jpg",
+      "description": "Compact wireless keyboard with ergonomic design and long battery life."
+    },
+    {
+      "id": 17,
+      "name": "Office Chair",
+      "category": "Furniture",
+      "price": 149.99,
+      "image": "/images/office-chair.jpg",
+      "description": "Comfortable office chair with adjustable height and lumbar support."
+    },
+    {
+      "id": 18,
+      "name": "Desk Lamp",
+      "category": "Furniture",
+      "price": 29.99,
+      "image": "/images/desk-lamp.jpg",
+      "description": "Modern desk lamp with adjustable brightness levels."
+    },
+    {
+      "id": 19,
+      "name": "Gaming Mouse",
+      "category": "Electronics",
+      "price": 59.99,
+      "image": "/images/gaming-mouse.jpg",
+      "description": "Precision gaming mouse with customizable RGB lighting."
+    },
+    {
+      "id": 20,
+      "name": "Travel Mug",
+      "category": "Accessories",
+      "price": 14.99,
+      "image": "/images/travel-mug.jpg",
+      "description": "Insulated travel mug for hot and cold beverages on the go."
+    }
+  ]
+  
