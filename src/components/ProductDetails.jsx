@@ -21,7 +21,7 @@ const ProductDetails = ({ product, onClose }) => {
         />
         <h2 className="text-2xl font-bold mb-2">{product.name}</h2>
         <p className="text-gray-700 mb-4">{product.description}</p>
-        <p className="text-lg font-semibold">Price: ${product.price}</p>
+        <p className="text-lg font-semibold">Price: ₹{product.price}</p>
       </div>
     </div>
   );

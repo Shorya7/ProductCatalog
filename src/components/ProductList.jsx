@@ -8,7 +8,7 @@ const ProductList = ({ onSelectProduct }) => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedCategories, setSelectedCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -33,18 +33,15 @@ const ProductList = ({ onSelectProduct }) => {
 
   // Update filtered products on search or category change
   useEffect(() => {
-    const filter = products.filter(product => {
-      const matchesSearch = product.name
-        .toLowerCase()
-        .includes(searchQuery.toLowerCase());
-      const matchesCategory = selectedCategory
-        ? product.category === selectedCategory
-        : true;
-      return matchesSearch && matchesCategory;
+    const filter = products.filter((product) => {
+      const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase());
+      const matchesCategories =
+        selectedCategories.length === 0 || selectedCategories.includes(product.category);
+      return matchesSearch && matchesCategories;
     });
 
     setFilteredProducts(filter);
-  }, [searchQuery, selectedCategory, products]);
+  }, [searchQuery, selectedCategories, products]);
 
   if (loading) {
     return (
@@ -64,7 +61,8 @@ const ProductList = ({ onSelectProduct }) => {
         <SearchBar setSearchQuery={setSearchQuery} />
         <CategoryFilter
           categories={[...new Set(products.map(p => p.category))]}
-          setSelectedCategory={setSelectedCategory}
+          selectedCategories={selectedCategories}
+          setSelectedCategories={setSelectedCategories}
         />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
