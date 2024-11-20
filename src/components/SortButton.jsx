@@ -46,36 +46,33 @@ const SortButton = ({ sortOption, setSortOption }) => {
           style={{ right: 0 }}
         >
           <div className="flex flex-col gap-3">
-            <label className="flex items-center space-x-3">
+            <label className="flex items-center space-x-3 hover:cursor-pointer">
               <input
                 type="radio"
                 name="sort"
                 value="popularity"
                 checked={sortOption === "popularity"}
                 onChange={() => handleSortChange("popularity")}
-                className="h-5 w-5"
               />
               <span className="text-gray-700">Popularity</span>
             </label>
-            <label className="flex items-center space-x-3">
+            <label className="flex items-center space-x-3 hover:cursor-pointer">
               <input
                 type="radio"
                 name="sort"
                 value="lowToHigh"
                 checked={sortOption === "lowToHigh"}
                 onChange={() => handleSortChange("lowToHigh")}
-                className="h-5 w-5"
               />
               <span className="text-gray-700">Low to High</span>
             </label>
-            <label className="flex items-center space-x-3">
+            <label className="flex items-center space-x-3 hover:cursor-pointer">
               <input
                 type="radio"
                 name="sort"
                 value="highToLow"
                 checked={sortOption === "highToLow"}
                 onChange={() => handleSortChange("highToLow")}
-                className="h-5 w-5"
               />
               <span className="text-gray-700">High to Low</span>
             </label>

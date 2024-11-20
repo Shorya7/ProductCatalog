@@ -39,13 +39,12 @@ const CategoryFilter = ({ categories, selectedCategories, setSelectedCategories 
           <h3 className="text-lg font-semibold mb-2">Categories:</h3>
           <div className="flex flex-col gap-2">
             {categories.map((category) => (
-              <label key={category} className="flex items-center space-x-2">
+              <label key={category} className="flex items-center space-x-2 hover:cursor-pointer">
                 <input
                   type="checkbox"
                   value={category}
                   checked={selectedCategories.includes(category)}
                   onChange={() => handleCheckboxChange(category)}
-                  className="h-5 w-5"
                 />
                 <span className="text-gray-700">{category}</span>
               </label>
