@@ -1,6 +1,7 @@
 # Product Catalog SPA
 
 This is a Product Catalog single page web application built with Vite+React that allows users to browse products, search for items, filter by categories, view product details, and more. The application features a clean user interface and responsive design that adapts to different screen sizes.
+
 ---
 
 ## Application Features
