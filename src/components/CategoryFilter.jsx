@@ -1,31 +1,58 @@
+import React, { useState, useEffect, useRef } from "react";
+import { FaFilter } from "react-icons/fa";
+
 const CategoryFilter = ({ categories, selectedCategories, setSelectedCategories }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef();
+
   const handleCheckboxChange = (category) => {
     if (selectedCategories.includes(category)) {
-      // Remove category if already selected
       setSelectedCategories(selectedCategories.filter((c) => c !== category));
     } else {
-      // Add category to the selected list
       setSelectedCategories([...selectedCategories, category]);
     }
   };
 
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
-    <div className="mb-4">
-      <h3 className="text-lg font-semibold mb-2">Filter by Categories:</h3>
-      <div className="flex flex-wrap gap-2">
-        {categories.map((category) => (
-          <label key={category} className="flex items-center space-x-2">
-            <input
-              type="checkbox"
-              value={category}
-              checked={selectedCategories.includes(category)}
-              onChange={() => handleCheckboxChange(category)}
-              className="h-4 w-4"
-            />
-            <span className="text-gray-700">{category}</span>
-          </label>
-        ))}
-      </div>
+    <div className="relative mb-4" ref={menuRef}>
+      <button
+        className="bg-black flex items-center text-secondary px-4 h-10 rounded hover:bg-white hover:border hover:text-black focus:outline-none"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <FaFilter className="mr-1"/>
+        Filters
+      </button>
+
+      {isOpen && (
+        <div className="absolute mt-2 w-48 bg-white border border-gray-300 rounded shadow-md p-4 z-20">
+          <h3 className="text-lg font-semibold mb-2">Categories:</h3>
+          <div className="flex flex-col gap-2">
+            {categories.map((category) => (
+              <label key={category} className="flex items-center space-x-2">
+                <input
+                  type="checkbox"
+                  value={category}
+                  checked={selectedCategories.includes(category)}
+                  onChange={() => handleCheckboxChange(category)}
+                  className="h-5 w-5"
+                />
+                <span className="text-gray-700">{category}</span>
+              </label>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
