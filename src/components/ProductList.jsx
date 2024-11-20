@@ -68,7 +68,7 @@ const ProductList = ({ onSelectProduct }) => {
 
   return (
     <div className="relative">
-      <div className="flex justify-between h-32 sm:h-16 flex-col sm:flex-row">
+      <div className="flex justify-between h-32 max-[400px]:h-28 sm:h-16 flex-col sm:flex-row">
         <SearchBar setSearchQuery={setSearchQuery} />
         <div className="flex items-center max-[400px]:space-x-4 space-x-6 ">
         <CategoryFilter
@@ -79,7 +79,7 @@ const ProductList = ({ onSelectProduct }) => {
         <SortButton sortOption={sortOption} setSortOption={setSortOption} />
         </div>
       </div>
-      <div className="my-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="my-4 max-[400px]:my-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredProducts.map((product) => (
           <ProductItem
             key={product.id}
