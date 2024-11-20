@@ -34,6 +34,7 @@ This is a Product Catalog single page web application built with Vite+React that
 - **Tailwind CSS**
 - **Libraries Used:**
     - React Icons
+    - Axios
 
 ---
 
