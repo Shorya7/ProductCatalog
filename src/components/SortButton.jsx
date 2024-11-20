@@ -31,11 +31,11 @@ const SortButton = ({ sortOption, setSortOption }) => {
       {/* Button */}
       <button
         ref={buttonRef}
-        className="bg-black flex items-center text-secondary px-4 h-10 w-[6.5rem] rounded hover:bg-white hover:border hover:text-black focus:outline-none"
+        className="bg-black flex justify-center items-center text-secondary max-[400px]:px-2 px-4 max-[400px]:w-20 max-[400px]:h-8 h-10 w-[6.5rem] rounded hover:bg-white hover:border hover:text-black focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
         <RiSortDesc className="mr-1" />
-        Sort by
+        <span className="max-[400px]:text-xs">Sort by</span>
       </button>
 
       {/* Submenu */}

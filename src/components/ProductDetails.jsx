@@ -5,7 +5,7 @@ const ProductDetails = ({ product, onClose }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
       <div
-        className="bg-white p-6 rounded-lg shadow-lg w-11/12 max-w-lg transform transition-transform duration-300 scale-100"
+        className="bg-white max-[400px]:p-3 p-6 rounded-lg shadow-lg w-5/6 sm:w-11/12 max-w-lg transform transition-transform duration-300 scale-100"
         style={{ animation: "popupIn 0.3s ease-out" }}
       >
         <button
@@ -17,10 +17,10 @@ const ProductDetails = ({ product, onClose }) => {
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-64 object-contain rounded-md mb-4"
+          className="w-full max-[400px]:h-52 h-64 object-contain rounded-md mb-4"
         />
-        <h2 className="text-2xl font-bold mb-2">{product.name}</h2>
-        <p className="text-gray-700 mb-4">{product.description}</p>
+        <h2 className="text-2xl max-[400px]:text-lg font-bold mb-2">{product.name}</h2>
+        <p className="text-gray-700 max-[400px]:text-sm mb-4">{product.description}</p>
         <p className="text-lg font-semibold">Price: ₹{product.price}</p>
       </div>
     </div>

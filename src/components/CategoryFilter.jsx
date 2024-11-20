@@ -27,11 +27,11 @@ const CategoryFilter = ({ categories, selectedCategories, setSelectedCategories 
   return (
     <div className="relative mb-4" ref={menuRef}>
       <button
-        className="bg-black flex items-center text-secondary px-4 h-10 rounded hover:bg-white hover:border hover:text-black focus:outline-none"
+        className="bg-black flex justify-center items-center max-[400px]:px-2 max-[400px]:w-20 max-[400px]:h-8 text-secondary px-4 h-10 rounded hover:bg-white hover:border hover:text-black focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
         <FaFilter className="mr-1"/>
-        Filters
+        <span className="max-[400px]:text-xs">Filters</span>
       </button>
 
       {isOpen && (

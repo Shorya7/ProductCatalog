@@ -66,9 +66,9 @@ const ProductList = ({ onSelectProduct }) => {
 
   return (
     <div className={`relative ${sortOption === "isOpen" ? "blur-sm" : ""}`}>
-      <div className="flex justify-between h-16">
+      <div className="flex justify-between h-32 sm:h-16 flex-col sm:flex-row">
         <SearchBar setSearchQuery={setSearchQuery} />
-        <div className="flex items-center space-x-6">
+        <div className="flex items-center max-[400px]:space-x-4 space-x-6 ">
         <CategoryFilter
           categories={[...new Set(products.map((p) => p.category))]}
           selectedCategories={selectedCategories}
