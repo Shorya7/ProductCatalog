@@ -67,3 +67,7 @@ https://shorya-product-catalog.netlify.app/
 
 ---
 
+### Screenshots
+![image](https://github.com/user-attachments/assets/2fd36da3-c234-401e-9162-f1844c744386)
+![image](https://github.com/user-attachments/assets/5be995e8-286c-485c-b2cc-84582135a543)
+
