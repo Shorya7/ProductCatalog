@@ -4,6 +4,7 @@ import ProductItem from "./ProductItem";
 import SearchBar from "./SearchBar";
 import CategoryFilter from "./CategoryFilter";
 import SortButton from "./SortButton";
+import { useCart } from './CartContext';
 
 const ProductList = ({ onSelectProduct }) => {
   const [products, setProducts] = useState([]);
@@ -13,6 +14,7 @@ const ProductList = ({ onSelectProduct }) => {
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const { addToCart } = useCart(); // Get addToCart function from context
 
   useEffect(() => {
     // Fetch products using Axios
@@ -65,7 +67,7 @@ const ProductList = ({ onSelectProduct }) => {
   }
 
   return (
-    <div className={`relative ${sortOption === "isOpen" ? "blur-sm" : ""}`}>
+    <div className="relative">
       <div className="flex justify-between h-32 sm:h-16 flex-col sm:flex-row">
         <SearchBar setSearchQuery={setSearchQuery} />
         <div className="flex items-center max-[400px]:space-x-4 space-x-6 ">
@@ -83,6 +85,7 @@ const ProductList = ({ onSelectProduct }) => {
             key={product.id}
             product={product}
             onSelect={() => onSelectProduct(product)}
+            addToCart={() => addToCart(product)}
           />
         ))}
       </div>
