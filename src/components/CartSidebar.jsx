@@ -1,5 +1,6 @@
 import React from 'react';
 import { useCart } from './CartContext';
+import { MdDelete } from "react-icons/md";
 
 const CartSidebar = ({ isOpen, toggleSidebar }) => {
   const { cartItems, removeFromCart } = useCart();
@@ -13,7 +14,7 @@ const CartSidebar = ({ isOpen, toggleSidebar }) => {
           <li key={item.id} className="p-4 border-b">
             <div className="flex justify-between">
               <span>{item.name}</span>
-              <button onClick={() => removeFromCart(item.id)} className="text-red-500">Remove</button>
+              <button onClick={() => removeFromCart(item.id)} ><MdDelete className="text-red-600 size-5" /></button>
             </div>
           </li>
         ))}
